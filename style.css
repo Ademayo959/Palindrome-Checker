@@ -1,0 +1,125 @@
+:root {
+    --bg-color: #40FFA7;
+    --theme-color: #050761;
+}
+
+body {
+    display: flex;
+    background: var(--bg-color);
+    transition: background 0.5s ease;
+    font-family: monospace;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: grid;
+    overflow: hidden;
+}
+
+.main-div {
+    background-color: var(--theme-color);
+    border-radius: 19px;
+}
+
+.main-header {
+    margin: 15px;
+    color: var(--bg-color);
+}
+
+.desc {
+    margin: 15px;
+    color: var(--bg-color);
+}
+
+.main-input {
+    display: block;
+    margin: 15px;
+    justify-self: center;
+    border: none;
+    width: 325px;
+    padding-top: 10px 5px;
+    height: 26.5px;
+}
+
+.btn {
+    display: block;
+    justify-self: center;
+    width: 302px;
+    height: 38px;
+    background: var(--bg-color);
+    border: none;
+    border-radius: 19px;
+    color: var(--theme-color);
+    font-family: monospace;
+}
+
+.result-text {
+    justify-self: center;
+    color: var(--bg-color);
+}
+
+/*Styles for the theme toggle button*/
+.light {
+    height: 1cm;
+    width: 1cm;
+    justify-self: center;
+    align-self: center;
+}
+
+.dark {
+    height: 1cm;
+    width: 1cm;
+    justify-self: center;
+    align-self: center;
+}
+
+.top-div {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.theme-changer {
+    display: flex;
+    align-items: center;
+    grid-column: 3;
+    float: right;
+    color: var(--bg-color);
+    background: var(--theme-color);
+    border: none;
+    border-radius: 50%;
+    height: 1.2cm;
+    width: 1.2cm;
+}
+
+/* Dark mode overrides*/
+body.dark-mode {
+    --bg-color: #050761;
+    --theme-color: #40FFA7;
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        min-height: 70vh;
+        overflow: hidden;
+    }
+
+    .main-div {
+        margin: 19px;
+        height: 302px;
+        width: 340px;
+    }
+
+    .main-input {
+        width: 302px;
+    }
+
+    .btn {
+        width: 264px;
+    }
+
+    .theme-changer {
+        margin-right: 20px;
+    }
+
+    .br {
+        display: none;
+    }
+}
